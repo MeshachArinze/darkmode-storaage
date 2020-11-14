@@ -1,0 +1,135 @@
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+}
+
+:root{
+    --clr-light: #fdddc4;
+    --clr-dark: #00332a;
+    --clr-primary: #c3fcf2;
+    --clr-accent: #ff7750;
+
+    --fore: var(--clr-dark);
+    --background: var(--clr-light);
+
+    --ff-title: "font-family", san-serif;
+}
+
+.darkmode{
+    --clr-light: #fdffc4;
+    --clr-dark: #00332a;
+    --clr-primary: #202302;
+    --clr-secondary: #00100d;
+    --clr-accent: #ff7750;
+
+    --foreground: var(--clr-light);
+    --background: var(--clr-dark);
+}
+
+body{
+    background: var(--background);
+}
+
+section{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+section h1{
+    color: var(--clr-dark);
+    font-size: 30px;
+    text-align: center;
+}
+section p{
+    color: var(--clr-secondary);
+    text-align: center;
+}
+
+.btn-group{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.btn-group .btn-accent{
+    background: var(--clr-accent);
+    width: 100px;
+    height: 30px;
+    text-align: center;
+    color: var(--clr-secondary);
+    text-decoration: none;
+    border-radius: 1pc;
+    margin-right: 10px;
+    padding: 5px 0;
+}
+
+.btn-group .btn-accent:hover{
+    background: var(--clr-primary);
+    transition: transform 1s ease-in-out;
+    transform-style: preserve-3d;
+    transform: rotate(360deg);
+}
+
+.btn-group .btn-secondary{
+    background: var(--clr-primary);
+    width: 100px;
+    height: 30px;
+    text-align: center;
+    color: var(--clr-secondary);
+    text-decoration: none;
+    border-radius: 1pc;
+    margin-right: 10px;
+    padding: 5px 0;
+}
+.btn-group .btn-secondary:hover{
+    background: var(--clr-accent);
+    transition: transform 1s ease-in-out;
+    transform-style: preserve-3d;
+    transform: rotate(-360deg);
+}
+
+.container #dark-mode-toggle{
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    padding: 10px;
+    border-radius: 1pc;
+    transform: rotate(360deg);
+    transition: transform 1s ease-in-out;
+    border: 1px solid var(--clr-accent);
+    outline: none;
+}
+.container #dark-mode-toggle:hover{
+    border-radius: 1pc;
+    transform: rotate(-360deg);
+    transition: transform 1s ease-in-out;
+    border: 3px solid black;
+    outline: none;
+}
+
+#box{
+    display: block;
+}
+#box input[type="checkbox"]{
+    position: absolute;
+    top: 10px;
+    width: 50px;
+    height: 20px;
+    left: 10px;
+    background: var(--clr-accent);
+    color: var(--clr-dark);
+    cursor: pointer;
+}
+#box input[type="checkbox"]:hover, input[type="checkbox"]:checked{
+    background: var(--clr-primary);
+    color: #c3fcf2;
+    cursor: pointer;
+}
+label{
+    position: absolute;
+    top: 15px;
+    left: 50px;
+    color: #000000
+}
